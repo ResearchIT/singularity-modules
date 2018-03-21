@@ -6,7 +6,7 @@ source /opt/rit/singularity/modules/library.tcl
 #=====
 set name        qiime
 set version     2-2017.11
-set progdir     /opt/rit/singularity/${name}/${version}
+set progdir     /opt/rit/singularity/images/${name}/${version}
 set description "$name - $version"
 set notes       "QIIME consists of native Python 2 code and additionally wraps many external applications. This gives the user flexibility to easily build their own analysis pipelines, making use of popular microbial community analysis tools"
 set homepage    "http://qiime2.org/"
