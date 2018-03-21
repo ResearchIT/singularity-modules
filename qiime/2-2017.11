@@ -1,5 +1,5 @@
 #%Module 1.0
-source /opt/rit/modules/library.tcl
+source /opt/rit/singularity/modules/library.tcl
 
 #=====
 # Variables
