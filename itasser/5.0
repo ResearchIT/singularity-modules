@@ -1,0 +1,30 @@
+#%Module 1.0
+source /opt/rit/singularity/modules/library.tcl
+
+#=====
+# Variables
+#=====
+set name        itasser
+set version     5.0
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       " I-TASSER Suite is a package of standalone computer programs, developed for high-resolution protein structure prediction, refinement, and structure-based function annotations."
+set homepage    "https://zhanglab.ccmb.med.umich.edu/I-TASSER/"
+set download    "https://zhanglab.ccmb.med.umich.edu/I-TASSER/download/download.php"
+set helpcommand "Message Board at https://zhanglab.ccmb.med.umich.edu/bbs/?q=forum/2"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
+
+if { [ module-info mode load ] } {
+    ModulesHelp
+}
