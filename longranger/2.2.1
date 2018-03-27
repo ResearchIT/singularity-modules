@@ -1,0 +1,30 @@
+#%Module 1.0
+source /opt/rit/singularity/modules/library.tcl
+
+#=====
+# Variables
+#=====
+set name        longranger
+set version     2.2.1
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "Data analysis software designed for fitting linear mixed models"
+set homepage    "http://etetoolkit.org/"
+set download    "http://etetoolkit.org/download/"
+set helpcommand "http://etetoolkit.org/docs/latest/index.html"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin:${progdir}
+
+if { [ module-info mode load ] } {
+    ModulesHelp
+}
+
