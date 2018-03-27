@@ -1,0 +1,30 @@
+#%Module 1.0
+source /opt/rit/singularity/modules/library.tcl
+
+#=====
+# Variables
+#=====
+set name        tofu2
+set version     v17
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "PacBio development version of the latest Tofu2. Disclaimer: ToFU2 is not officially released by PacBio and is not supported by PacBio Technical Support. The code is subject to daily change. Use at your own risk."
+set homepage    "https://github.com/PacificBiosciences/IsoSeq_SA3nUP/wiki/%5BBeta%5D-ToFU2:-running-and-installing-ToFU2#precluster"
+set download    "ttps://github.com/Magdoll/cDNA_Cupcake.git"
+set helpcommand "Documentation is available online "
+set contact     "researchit@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin:${progdir}
+
+if { [ module-info mode load ] } {
+    ModulesHelp
+}
+
