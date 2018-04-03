@@ -1,0 +1,30 @@
+#%Module 1.0
+source /opt/rit/singularity/modules/library.tcl
+
+#=====
+# Variables
+#=====
+set name        cnvnator
+set version     0.3.3
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "a tool for CNV discovery and genotyping from depth-of-coverage by mapped reads.  This container is from https://hub.docker.com/u/halllab/"
+set homepage    "https://github.com/abyzovlab/CNVnator"
+set download    "https://github.com/abyzovlab/CNVnator"
+set helpcommand "cnvnator or view ${progdir}/doc/README"
+set contact     "hpc-help@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
+
+if { [ module-info mode load ] } {
+    ModulesHelp
+}
+
