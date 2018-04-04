@@ -1,0 +1,30 @@
+#%Module 1.0
+source /opt/rit/singularity/modules/library.tcl
+
+#=====
+# Variables
+#=====
+set name        crispr-dav
+set version     2.2.4
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "CRISPR-DAV is a pipeline to analyze amplicon-based NGS data of CRISPR clones in a high throughput manner.  Also available from shub://ISU-HPC/crispr-dav"
+set homepage    "https://github.com/pinetree1/crispr-dav"
+set download    "https://github.com/pinetree1/crispr-dav"
+set helpcommand "crispr-dav --help"
+set contact     "hpc-help@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
+
+if { [ module-info mode load ] } {
+    ModulesHelp
+}
+
