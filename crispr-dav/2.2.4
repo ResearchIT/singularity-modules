@@ -1,5 +1,4 @@
 #%Module 1.0
-source /opt/rit/singularity/modules/library.tcl
 
 #=====
 # Variables
@@ -23,8 +22,3 @@ module load singularity
 # Environment Options
 #=====
 prepend-path      PATH      ${progdir}/bin
-
-if { [ module-info mode load ] } {
-    ModulesHelp
-}
-
