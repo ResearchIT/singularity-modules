@@ -1,0 +1,25 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        tensorflow
+set version     1.8.0
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "TensorFlow™ is an open source software library for high performance numerical computation."
+set homepage    "https://www.tensorflow.org"
+set download    "https://hub.docker.com/r/tensorflow/tensorflow/"
+set helpcommand "https://www.tensorflow.org/get_started/" 
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin

@@ -1,0 +1,23 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        keras
+set version     1.1
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "Keras is a high-level neural networks API, written in Python and capable of running on top of TensorFlow, CNTK, or Theano. This environment includes Tensorflow-gpu and only that version of tensorflow."
+set homepage    "https://keras.io"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
