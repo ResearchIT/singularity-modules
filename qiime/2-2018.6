@@ -1,0 +1,25 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        qiime
+set version     2-2018.6
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "QIIME consists of native Python 2 code and additionally wraps many external applications. This gives the user flexibility to easily build their own analysis pipelines, making use of popular microbial community analysis tools"
+set homepage    "http://qiime2.org/"
+set download    "http://qiime2.org"
+set helpcommand "Tutorials can be found at http://qiime2.org"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
