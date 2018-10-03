@@ -1,0 +1,25 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        freesurfer
+set version     6.0
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "An open source software suite for processing and analyzing (human) brain MRI images."
+set homepage    "https://surfer.nmr.mgh.harvard.edu/"
+set download    "https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall"
+set helpcommand "Documentation is available online"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin

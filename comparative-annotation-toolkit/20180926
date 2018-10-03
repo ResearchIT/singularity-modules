@@ -1,0 +1,24 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        comparative-annotation-toolkit
+set version     20180926
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "This project aims to provide a straightforward end-to-end pipeline that takes as input a HAL-format multiple whole genome alignment as well as a GFF3 file representing annotations on one high quality assembly in the HAL alignment, and produces a output GFF3 annotation on all target genomes chosen."
+set homepage    "https://github.com/ComparativeGenomicsToolkit/Comparative-Annotation-Toolkit"
+set download    "https://github.com/ComparativeGenomicsToolkit/Comparative-Annotation-Toolkit"
+set helpcommand ""
+set contact     "researchit@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
