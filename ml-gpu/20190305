@@ -1,0 +1,23 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        ml-gpu
+set version     20190305
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "This is a container for machine learning on gpus. If there is a particular piece of software you require, please email researchit@iastate.edu for inclusion (if possible)."
+set homepage    "https://researchit.las.iastate.edu"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
