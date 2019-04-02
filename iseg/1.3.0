@@ -1,0 +1,23 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        iseg
+set version     1.3.0
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "iSeg - Fast Segmentation of Genomic Sequences"
+set homepage    "http://lebesgue.fgcu.edu/iSeg/"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin

@@ -1,0 +1,23 @@
+#%Module 8
+
+#=====
+# Variables
+#=====
+set name        mysql-server
+set version     8
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "MySQL is an open source relational database management system."
+set homepage    "https://www.mysql.com"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin

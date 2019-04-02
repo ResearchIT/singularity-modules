@@ -1,0 +1,23 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        simnibs
+set version     2.1.2
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "Simnibs is a free software package for the Simulation of Non-invasive Brain Stimulation. It allows for realistic calculations of the electric field induced by transcranial magnetic stimulation (TMS) and transcranial direct current stimulation (tDCS)."
+set homepage    "http://simnibs.de"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin

@@ -1,0 +1,24 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        bambam
+set version     1.3
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "BamBam provides a powerful and convenient framework to analyze genome sequence data contained in BAM files."
+set homepage    "https://udall-lab.byu.edu/Research/Software/BamBam.aspx"
+set download    "https://udall-lab.byu.edu/Research/Software/BamBam.aspx"
+set helpcommand "https://udall-lab.byu.edu/Research/Software/BamBam.aspx"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin:${progdir}

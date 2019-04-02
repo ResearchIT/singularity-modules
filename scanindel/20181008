@@ -1,0 +1,23 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        scanindel
+set version     20181008
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "ScanIndel is a python program to detect indels (insertions and deletions) from NGS data by re-align and de novo assemble soft clipped reads."
+set homepage    "https://github.com/cauyrd/ScanIndel"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin

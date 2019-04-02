@@ -1,0 +1,23 @@
+#%Module 1.0
+
+#=====
+# Variables
+#=====
+set name        pkiss
+set version     2.2.12
+set progdir     /opt/rit/singularity/images/${name}/${version}
+set description "$name - $version"
+set notes       "pKiss is a tool for folding RNA secondary structures, including two limited classes of pseudoknots."
+set homepage    "https://bibiserv2.cebitec.uni-bielefeld.de/pkiss"
+set contact     "researchit@iastate.edu"
+set parallelism ""
+
+#=====
+# Module options
+#=====
+module-whatis   ${description}
+module load singularity
+#=====
+# Environment Options
+#=====
+prepend-path      PATH      ${progdir}/bin
